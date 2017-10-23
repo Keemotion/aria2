@@ -936,6 +936,16 @@ std::vector<OptionHandler*> OptionHandlerFactory::createOptionHandlers()
   }
   {
     OptionHandler* op(new BooleanOptionHandler(
+      PREF_RETRY_ON_5XX, TEXT_RETRY_ON_5XX, A2_V_FALSE, OptionHandler::OPT_ARG));
+    op->addTag(TAG_FTP);
+    op->addTag(TAG_HTTP);
+    op->setInitialOption(true);
+    op->setChangeGlobalOption(true);
+    op->setChangeOptionForReserved(true);
+    handlers.push_back(op);
+  }
+  {
+    OptionHandler* op(new BooleanOptionHandler(
         PREF_REUSE_URI, TEXT_REUSE_URI, A2_V_TRUE, OptionHandler::OPT_ARG));
     op->addTag(TAG_FTP);
     op->addTag(TAG_HTTP);

@@ -674,6 +674,8 @@
 #define TEXT_REUSE_URI                          \
   _(" --reuse-uri[=true|false]     Reuse already used URIs if no unused URIs are\n" \
     "                              left.")
+#define TEXT_RETRY_ON_5XX                       \
+  _(" --retry-on-5xx[=true|false]  Retry when encountering any 5xx errors")
 #define TEXT_ALL_PROXY_USER                                             \
   _(" --all-proxy-user=USER        Set user for --all-proxy.")
 #define TEXT_ALL_PROXY_PASSWD                                           \
